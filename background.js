@@ -57,7 +57,7 @@ var actualCode = '(' + function() {
 	}
 	var btn = document.createElement("BUTTON");
 	btn.onclick = btnClick;        // Create a <button> element
-	var t = document.createTextNode("CLICK ME");       // Create a text node
+	var t = document.createTextNode("OY VER");       // Create a text node
 	btn.appendChild(t); 
 	var a = document.getElementsByTagName('th');
 	for(var i=4;i>=0;i--)

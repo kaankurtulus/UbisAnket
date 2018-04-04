@@ -1,7 +1,8 @@
 {
-  "name": "Ubis Anket",
+  "name": "Ubis Anket Doldurma",
+  "short_name": "Ubis Yardimci",
   "version": "1.0",
-  "description": "Ubis anket doldurma.",
+  "description": "Ubis anketlerini otomatik doldurur.",
   "content_scripts": [
     {
       "matches": ["https://ubis.aydin.edu.tr/?Pointer=Ogrenci&Page=DersDegerlendirme&SubPage=dForm*"],
