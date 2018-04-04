@@ -49,16 +49,13 @@ var actualCode = '(' + function() {
 				}
 			}
 		}
-		// All code is executed in a local scope.
-		// For example, the following does NOT overwrite the global `alert` method
-		var alert = null;
-		// To overwrite a global variable, prefix `window`:
-		window.alert = "hll";
+		var f = document.getElementsByTagName("Form");
+		f[0].submit();
 	}
-	var btn = document.createElement("BUTTON");
-	btn.onclick = btnClick;        // Create a <button> element
-	var t = document.createTextNode("OY VER");       // Create a text node
-	btn.appendChild(t); 
+	var btn = document.createElement("input");
+	btn.type = "submit";
+    btn.value = "Oy Ver ve Kaydet";
+	btn.onclick = btnClick;
 	var a = document.getElementsByTagName('th');
 	for(var i=4;i>=0;i--)
 		a[0].appendChild(createRadioElement("rate",false,i+1));

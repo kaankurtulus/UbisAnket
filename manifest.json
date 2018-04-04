@@ -6,7 +6,7 @@
   "content_scripts": [
     {
       "matches": ["https://ubis.aydin.edu.tr/?Pointer=Ogrenci&Page=DersDegerlendirme&SubPage=dForm*"],
-      "js": ["thirdparty/jquery.min.js","background.js"]
+      "js": ["background.js"]
     }
   ],
   "permissions": [
