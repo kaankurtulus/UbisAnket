@@ -1,0 +1,18 @@
+{
+  "name": "Ubis Anket",
+  "version": "1.0",
+  "description": "Ubis anket doldurma.",
+  "content_scripts": [
+    {
+      "matches": ["https://ubis.aydin.edu.tr/?Pointer=Ogrenci&Page=DersDegerlendirme&SubPage=dForm*"],
+      "js": ["thirdparty/jquery.min.js","background.js"]
+    }
+  ],
+  "permissions": [
+          "tabs"
+        ],
+	"browser_action": {
+		"default_icon": "logo.png"
+	},
+  "manifest_version": 2
+}
