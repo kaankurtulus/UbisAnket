@@ -37,28 +37,33 @@ var actualCode = '(' + function() {
 		   if(a[i].checked)
 			   selectedR = a[i].value;
 		 }
-		 console.log(selectedR+" "+a);
+		 console.log(selectedR+" selected radio ");
 		for(var i=0;i<DdData.length;i++)
 		{
 			for(q=0;q<DdData[i].qcount;q++)
 			{
 				if(DdData[i].type == "radio")
 				{
-					console.log(DdData[i].type);
 					$('SUR_'+DdData[i].name+'_'+q+'_'+selectedR).checked = true
 				}
 			}
 		}
-		var f = document.getElementsByTagName("Form");
-		f[0].submit();
+		
 	}
 	var btn = document.createElement("input");
 	btn.type = "submit";
-    btn.value = "Oy Ver ve Kaydet";
-	btn.onclick = btnClick;
+    btn.value = "Kaydet";
+	btn.onclick = function(){
+		var f = document.getElementsByTagName("Form");
+		f[0].submit();
+	};
 	var a = document.getElementsByTagName('th');
-	for(var i=4;i>=0;i--)
-		a[0].appendChild(createRadioElement("rate",false,i+1));
+	
+	for(var i=4;i>=0;i--){
+		var r = createRadioElement("rate",false,i+1);
+		r.onchange=btnClick;
+		a[0].appendChild(r);
+	}
 	a[0].appendChild(btn);
 	
 } + ')();';
