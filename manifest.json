@@ -5,7 +5,11 @@
   "description": "Ubis anketlerini otomatik doldurur.",
   "content_scripts": [
     {
-      "matches": ["https://ubis.aydin.edu.tr/?Pointer=Ogrenci&Page=DersDegerlendirme&SubPage=dForm*"],
+      "matches": ["https://ubis.aydin.edu.tr/?Pointer=Ogrenci&Page=DersDegerlendirme&SubPage=dForm"],
+      "js": ["background.js"]
+    },
+	{
+      "matches": ["https://ubis.aydin.edu.tr/?Pointer=Ogrenci&Page=DanismanDegerlendirme&"],
       "js": ["background.js"]
     }
   ],
